@@ -1,0 +1,1346 @@
+#payment_module {
+  position: absolute;
+  top: 0;
+  z-index: 900;
+  height: 100%;
+  width: 100%;
+  color: #313131;
+  font-size: 0.6rem;
+  box-sizing: border-box;
+}
+
+#payment_module.ptzf {
+  color: #353535;
+}
+
+#payment_module input[type="text"]::-webkit-input-placeholder,
+#payment_module textarea::-webkit-input-placeholder {
+  color: #bfbfbf;
+}
+
+#payment_module .pay_page {
+  background-color: #f7f7f7;
+  height: 100%;
+  width: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+#payment_module .mainButton {
+  text-align: center;
+  border-radius: 0.15rem;
+}
+
+#payment_module .cancelBtn {
+  box-sizing: border-box;
+  background-color: #fff;
+  color: #ff6c6c;
+  border: 0.05rem solid #ff6c6c;
+}
+
+#payment_module .confirmBtn {
+  background-color: #ff6c6c;
+  color: #fff;
+}
+
+#payment_module .confirmBtn.active {
+  background-color: #fa555b;
+}
+
+#payment_module .center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#payment_module .center_t {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+#payment_module .gray_font {
+  color: #7d7d7d;
+}
+
+#payment_module.ptzf .gray_font {
+  color: #888;
+}
+
+#payment_module .red_font {
+  color: #ff6c6c;
+}
+
+#payment_module.ptzf .red_font {
+  color: #ff563b;
+}
+
+#payment_module .gray_bg {
+  background-color: #f7f7f7;
+}
+
+#payment_module .payInfoLine {
+  background-color: #fff;
+  position: relative;
+  border-bottom: 0.05rem solid #ddd;
+  padding-left: 0.65rem;
+  padding-right: 0.65rem;
+}
+
+#payment_module.ptzf .payInfoLine {
+  padding: 0 0.75rem;
+}
+
+#payment_module .inputLine {
+  padding: 0.75rem 0;
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+#payment_module .hasVCode {
+  padding: 0;
+}
+
+#payment_module .hasVCode input {
+  width: 7rem !important;
+}
+
+#payment_module .inputLine .title {
+  color: #7d7d7d;
+  display: inline-block;
+  width: 3.5rem;
+  padding-right: 0.35rem;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+
+#payment_module.ptzf .inputLine .title {
+  color: #888;
+  padding-right: 0.25rem;
+}
+
+#payment_module .inputLine .content {
+  border: 0;
+  width: 10rem;
+  font-size: 0.6rem;
+}
+
+#payment_module .icon {
+  background-image: url("../images/icon.png");
+  background-repeat: no-repeat;
+  background-size: 8.675rem 5.8rem;
+  display: inline-block;
+  margin-right: 0.2rem;
+  vertical-align: middle;
+  background-origin: content-box;
+}
+
+#payment_module .warnIcon {
+  width: 0.75rem;
+  height: 0.75rem;
+  background-position: -3.45rem -4.34rem;
+}
+
+#payment_module .siteIcon {
+  width: 0.7rem;
+  height: 1.1rem;
+  background-position: -0.7rem -4.1rem;
+  margin-right: 0.3rem;
+}
+
+#payment_module .shopIcon {
+  width: 0.8rem;
+  height: 0.8rem;
+  background-position: -2rem -4.29rem;
+}
+
+#payment_module .touchIcon {
+  width: 0.6rem;
+  height: 1rem;
+  background-position: -7.2rem -2.35rem;
+}
+
+#payment_module .editIcon {
+  width: 0.8rem;
+  height: 0.8rem;
+  background-position: -4.85rem -4.29rem;
+}
+
+#payment_module .warnMsg {
+  color: #bfbfbf;
+}
+
+#payment_module .topBar {
+  height: 1.875rem;
+  line-height: 1.875rem;
+  text-align: center;
+  position: relative;
+  font-size: 0.7rem;
+  color: #535353;
+  position: absolute;
+  width: 100%;
+  box-sizing: border-box;
+  z-index: 10;
+}
+
+#payment_module.ptzf .topBar.tab {
+  font-size: 0.6rem;
+  color: #b2b2b2;
+  background-color: #fff;
+  border-bottom: 0.05rem solid #dadada;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#payment_module.ptzf .topBar.tab .topBarTab {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  -ms-flex-preferred-size: 0;
+}
+
+#payment_module.ptzf .topBar.tab .topBarTab span {
+  display: inline-block;
+  height: 1.875rem;
+  padding: 0 0.4rem;
+  box-sizing: border-box;
+}
+
+#payment_module .topBar .back {
+  left: 0.15rem;
+  width: 0.6rem;
+  height: 1rem;
+  background-position: -7.05rem -0.8rem;
+  padding: 0.5rem;
+}
+
+#payment_module .topBar .interact {
+  position: absolute;
+  right: 0.65rem;
+  font-size: 0.6rem;
+}
+
+#payment_module .payPageContent {
+  padding-top: 1.875rem;
+}
+
+#payment_module .siteBox {
+  min-height: 2.8rem;
+  padding-top: 0.6rem !important;
+  padding-bottom: 0 !important;
+  font-size: 0.65rem;
+}
+
+#payment_module .siteBox .emptyTips {
+  height: 1.75rem;
+  line-height: 1.75rem;
+  width: 6.4rem;
+  border-radius: 0.875rem;
+  text-align: center;
+}
+
+#payment_module .siteBox .siteInfo .siteIcon {
+  left: 0.15rem;
+  padding: 0.5rem;
+}
+
+#payment_module .siteBox .siteInfo .siteItemTop {
+  line-height: 1.2rem;
+  position: relative;
+  padding-right: 6rem;
+}
+
+#payment_module .siteBox .siteInfo .siteItemTop .phone {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+#payment_module .siteBox .siteInfo .siteItem {
+  line-height: 0.75rem;
+  font-size: 0.6rem;
+  margin-bottom: 0.6rem;
+}
+
+#payment_module.ptzf .siteBox {
+  min-height: 3.35rem;
+}
+
+#payment_module.ptzf .siteBox .siteInfo .siteItemTop {
+  line-height: 0.75rem;
+  padding: 0;
+  margin-bottom: 0.5rem;
+}
+
+#payment_module.ptzf .siteBox .siteInfo .siteItemTop .phone {
+  position: static;
+  display: inline-block;
+  margin-left: 0.75rem;
+}
+
+#payment_module.ptzf .siteBox .siteInfo .siteItem {
+  margin-bottom: 0.45rem;
+}
+
+#payment_module.ptzf .siteBox .orderPaidMsg {
+  font-size: 0.55rem;
+  line-height: 0.7rem;
+  color: #b2b2b2;
+  margin: 0 0 0.6rem 1.05rem;
+  display: none;
+}
+
+#payment_module.ptzf .siteBox .orderPaidMsg .warnIcon {
+  width: 0.6rem;
+  height: 0.6rem;
+  background-image: url("../images/noticeicon.png");
+  background-size: 100% 100%;
+  background-position: 0 0;
+}
+
+#payment_module.ptzf .siteBox .orderPaidMsg .msg {
+  vertical-align: middle;
+}
+
+#payment_module.ptzf .siteBox .editContactIcon {
+  width: 0.25rem;
+  height: 0.45rem;
+  right: 0.25rem;
+  padding: 0.5rem;
+  background-origin: content-box;
+  background-image: url("../images/rightarrowicon.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+#payment_module .orderDetail .detailTop {
+  line-height: 1.1rem;
+  padding: 0.3rem 0;
+  position: relative;
+  overflow: hidden;
+}
+
+#payment_module .orderDetail .detailTop .orderStatus {
+  word-break: break-all;
+}
+
+#payment_module .orderDetail .commodityBox {
+  padding: 0.425rem;
+  padding-left: 4.6rem;
+  min-height: 2.35rem;
+  position: relative;
+  font-size: 0.55rem;
+  line-height: 0.675rem;
+}
+
+#payment_module .orderDetail .commodityImg {
+  width: 3.75rem;
+  height: 2.35rem;
+  position: absolute;
+  left: 0.425rem;
+  top: 0.425rem;
+}
+
+#payment_module .orderDetail .commodityName {
+  height: 1.35rem;
+  margin-top: 0.075rem;
+  margin-bottom: 0.15rem;
+}
+
+#payment_module .orderDetail .commodityPrice {
+  margin-bottom: 0.25rem;
+}
+
+#payment_module .orderDetail .commodityPrice .oriPrice {
+  margin-left: 0.1rem;
+  text-decoration: line-through;
+}
+
+#payment_module .orderDetail .commodityNum {
+  float: right;
+}
+
+#payment_module.ptzf .orderDetail .commodityBox {
+  height: 4.75rem;
+  padding: 0.5rem 0.5rem 0.5rem 4.75rem;
+  box-sizing: border-box;
+}
+
+#payment_module.ptzf .orderDetail .commodityImg {
+  height: 3.75rem;
+  left: 0.5rem;
+  top: 0.5rem;
+}
+
+#payment_module.ptzf .orderDetail .commodityName {
+  height: 1.7rem;
+  line-height: 0.85rem;
+  margin: 0 0 1.4rem;
+}
+
+#payment_module.ptzf .orderDetail .commodityPrice {
+  font-size: 0.55rem;
+  line-height: 0.65rem;
+  color: #888;
+  margin: 0;
+}
+
+#payment_module.ptzf .orderDetail .commodityPrice .oriPrice {
+  color: #c1c1c1;
+  margin-left: 0.25rem;
+}
+
+#payment_module.ptzf .orderDetail .commodityPrice .discount {
+  display: inline-block;
+  width: 3.25rem;
+  height: 0.75rem;
+  font-size: 0.5rem;
+  line-height: 0.75rem;
+  text-align: center;
+  border-radius: 0.375rem;
+  color: #ff563b;
+  background-color: #ffddd8;
+  margin-left: 0.25rem;
+  text-shadow: -1px -1px 0 #fff, 0px -1px 0 #fff, 1px -1px 0 #fff, 1px 0 0 #fff,
+    1px 1px 0 #fff, 0px 1px 0 #fff, -1px 1px 0 #fff, -1px 0 0 #fff;
+}
+
+#payment_module .orderPage .payPageContent {
+  padding-bottom: 2.5rem;
+}
+
+#payment_module .orderPage .siteBox .siteInfo {
+  margin-left: 1.05rem;
+}
+
+#payment_module .orderPage .orderDetail {
+  border-top: 0.05rem solid #ddd;
+  margin-top: 0.425rem;
+}
+
+#payment_module .orderPage .orderDetail .shopIcon {
+  vertical-align: -0.12rem;
+}
+
+#payment_module .orderPage .orderDetail .detailTop .content {
+  position: static;
+}
+
+#payment_module .orderPage .orderDetail .purchaseNum .optBtn {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translate(0, -50%);
+}
+
+#payment_module .orderPage .orderDetail .purchaseNum .optBtn .optIcon {
+  display: inline-block;
+  width: 1.05rem;
+  height: 1.05rem;
+  background-origin: content-box;
+  background-clip: content-box;
+  background-image: url("../images/optsprite.png");
+  background-repeat: no-repeat;
+  background-size: 5rem 1.25rem;
+  vertical-align: middle;
+}
+
+#payment_module .orderPage .orderDetail .purchaseNum .optBtn .optIcon.sub {
+  padding-right: 0.65rem;
+  background-position: -1.325rem -0.1rem;
+}
+
+#payment_module .orderPage .orderDetail .purchaseNum .optBtn .optIcon.sub.disabled {
+  background-position: -0.025rem -0.1rem;
+}
+
+#payment_module .orderPage .orderDetail .purchaseNum .optBtn .optIcon.add {
+  padding-left: 0.65rem;
+  background-position: -3.925rem -0.1rem;
+}
+
+#payment_module .orderPage .orderDetail .purchaseNum .optBtn .optIcon.add.disabled {
+  background-position: -2.625rem -0.1rem;
+}
+
+#payment_module .orderPage .orderDetail .inputLine:nth-of-type(4) {
+  border-top: 0.05rem solid #ddd;
+}
+
+#payment_module .orderPage .orderDetail .leaveWord {
+  border-top: 0.05rem solid #ddd;
+}
+
+#payment_module .orderPage .orderExplain {
+  padding: 0.7rem 0.65rem 0;
+  font-size: 0.55rem;
+  color: #535353;
+  line-height: 0.85rem;
+}
+
+#payment_module .orderPage .buyNoticeTip {
+  position: absolute;
+  left: 50%;
+  top: 10.45rem;
+  transform: translate(-50%, 0);
+  height: 1.25rem;
+  text-align: center;
+  line-height: 1.25rem;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 0 0.55rem;
+  border-radius: 0.15rem;
+  display: none;
+}
+
+#payment_module .orderPage .buyNotice {
+  padding: 0.925rem 0.65rem 0;
+  font-size: 0.5rem;
+  color: #797979;
+  line-height: 0.65rem;
+}
+
+#payment_module .orderPage .buyNotice .tickBox {
+  display: inline-block;
+  width: 0.65rem;
+  height: 0.65rem;
+  background-origin: content-box;
+  background-clip: content-box;
+  background-image: url("../images/nottickicon.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  vertical-align: bottom;
+  padding: 0.25rem;
+  margin: -0.25rem 0 -0.25rem -0.25rem;
+}
+
+#payment_module .orderPage .buyNotice .tickBox.select {
+  background-image: url("../images/tickicon.png");
+}
+
+#payment_module .orderPage .buyNotice .content {
+  color: #ff6c6c;
+}
+
+#payment_module .orderPage .bottomBar {
+  box-sizing: border-box;
+  width: 100%;
+  height: 2.1rem;
+  line-height: 2.1rem;
+  text-align: right;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  border-top: 0.05rem solid #ddd;
+  border-bottom: 0;
+  padding-right: 6.25rem;
+  background-color: #fff;
+}
+
+#payment_module .orderPage .bottomBar .totalMoney {
+  font-weight: bold;
+  font-size: 0.7rem;
+}
+
+#payment_module .orderPage .bottomBar .confirmBtn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 5.35rem;
+  height: 100%;
+  border-radius: 0;
+  font-size: 0.65rem;
+}
+
+#payment_module .orderPage .bottomBar .confirmBtn.disabled {
+  background-color: #ff6c6c;
+}
+
+#payment_module.ptzf .orderPage .orderDetail {
+  padding: 0.75rem 0.75rem 0;
+  margin-top: 0.5rem;
+  background-color: #fff;
+}
+
+#payment_module.ptzf .orderPage .orderDetail .inputLine:nth-of-type(3) {
+  border-top: 0.05rem solid #ddd;
+}
+
+#payment_module.ptzf .orderPage .orderExplain {
+  padding: 0.7rem 0.75rem 0;
+}
+
+#payment_module.ptzf .orderPage .buyNotice {
+  padding: 0.925rem 0.75rem 0;
+}
+
+#payment_module.ptzf .orderPage .bottomBar {
+  padding-right: 6.9rem;
+}
+
+#payment_module.ptzf .orderPage .bottomBar .confirmBtn {
+  width: 6.1rem;
+}
+
+#payment_module.ptzf .orderPage .groupInfo {
+  min-height: 1.75rem;
+  padding: 0.75rem;
+  color: #fff;
+}
+
+#payment_module.ptzf .orderPage .groupInfo .payTimeBox {
+  float: right;
+  text-align: right;
+}
+
+#payment_module.ptzf .orderPage .groupInfo .payTimeBox .lessDay {
+  font-size: 0.5rem;
+  line-height: 0.6rem;
+}
+
+#payment_module.ptzf .orderPage .groupInfo .payTimeBox .lessTime span {
+  display: inline-block;
+  width: 1.05rem;
+  height: 1rem;
+  line-height: 1rem;
+  text-align: center;
+  border-radius: 0.2rem;
+  color: #ff563b;
+  background-color: #fff;
+  margin: 0.2rem 0.2rem 0;
+}
+
+#payment_module.ptzf .orderPage .groupInfo .payTimeBox .lessTime span:first-of-type {
+  margin-left: 0;
+}
+
+#payment_module.ptzf .orderPage .groupInfo .payTimeBox .lessTime span:last-of-type {
+  margin-right: 0;
+}
+
+#payment_module.ptzf .orderPage .groupInfo .groupResult {
+  font-size: 0.7rem;
+}
+
+#payment_module.ptzf .orderPage .groupInfo .groupTip {
+  font-size: 0.55rem;
+  line-height: 0.8rem;
+  margin-top: 0.1rem;
+}
+
+#payment_module.ptzf .orderPage .realPayment .money {
+  position: absolute;
+  right: 0;
+  font-size: 0.7rem;
+  font-weight: bold;
+}
+
+#payment_module.ptzf .orderPage .bottomBtn {
+  box-sizing: border-box;
+  width: 100%;
+  height: 2.1rem;
+  color: #888;
+  font-size: 0.65rem;
+  line-height: 2.1rem;
+  text-align: center;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  border-top: 0.05rem solid #ddd;
+  background-color: #fff;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#payment_module.ptzf .orderPage .bottomBtn .staticBtnItem {
+  position: relative;
+  width: 4.5rem;
+}
+
+#payment_module.ptzf .orderPage .bottomBtn .flexBtnItem {
+  color: #fff;
+  -webkit-box-flex: 1 1 0;
+  -webkit-flex: 1 1 0;
+  -ms-flex: 1 1 0;
+  flex: 1 1 0;
+}
+
+#payment_module.ptzf .orderPage .bottomBtn .line {
+  position: absolute;
+  width: 0.025rem;
+  height: 1.4rem;
+  background-color: #dadada;
+  left: 0;
+  top: 0.35rem;
+}
+
+#payment_module.ptzf .orderPage .siteBox .siteInfo {
+  padding-right: 0.6rem;
+}
+
+#payment_module .orderListPage .orderLine {
+  margin: 0.4rem;
+  border: 0.05rem solid #ddd;
+  background-color: #fff;
+}
+
+#payment_module .orderListPage .orderLine .contentBox {
+  padding: 0 0.65rem;
+}
+
+#payment_module .orderListPage .orderLine .payInfoLine {
+  border-bottom: 0;
+  padding: 0 0 0.625rem;
+}
+
+#payment_module .orderListPage .orderLine .orderPaidMsg {
+  margin-bottom: 0.6rem;
+  font-size: 0.55rem;
+  line-height: 0.75rem;
+}
+
+#payment_module .orderListPage .orderLine .leaveWord {
+  padding: 0.65rem 0;
+  line-height: 0.75rem;
+}
+
+#payment_module .orderListPage .bottomBar {
+  box-sizing: border-box;
+  height: 2.25rem;
+  line-height: 2.25rem;
+  border-top: 0.05rem solid #ddd;
+  padding: 0 0.65rem;
+}
+
+#payment_module .orderListPage .bottomBar .btn {
+  display: inline-block;
+}
+
+#payment_module .orderListPage .bottomBar .mainButton {
+  height: 1.4rem;
+  line-height: 1.4rem;
+  float: right;
+  width: 3.325rem;
+  margin: 0.425rem 0 0 0.425rem;
+}
+
+#payment_module .orderListPage .bottomBar .editContact {
+  color: #ff9921;
+}
+
+#payment_module .orderListPage .bottomBar .editContact .editIcon {
+  vertical-align: -0.2rem;
+}
+
+#payment_module.ptzf .orderListPage .orderList {
+  padding-bottom: 2.2rem;
+}
+
+#payment_module.ptzf .orderListPage .orderLine {
+  margin: 0.5rem 0.4rem;
+  border-radius: 0.2rem;
+  border: 1px solid #dcdcdc;
+}
+
+#payment_module.ptzf .orderListPage .orderLine:last-of-type {
+  margin-bottom: 1.25rem;
+}
+
+#payment_module.ptzf .orderListPage .orderLine .contentBox {
+  padding: 0 0.6rem;
+}
+
+#payment_module.ptzf .orderListPage .orderLine .orderStatus {
+  color: #ff563b;
+  text-align: right;
+  line-height: 1.65rem;
+}
+
+#payment_module.ptzf .orderListPage .orderLine .cutOffRule {
+  background-image: url("../images/dashed2.png");
+}
+
+#payment_module.ptzf .orderListPage .orderLine .orderBottom {
+  font-size: 0.65rem;
+  color: #888;
+  line-height: 2.25rem;
+  text-align: right;
+}
+
+#payment_module.ptzf .orderListPage .orderLine .orderBottom .num {
+  color: #ff563b;
+}
+
+#payment_module.ptzf .orderListPage .orderLine .orderBtn {
+  display: inline-block;
+  width: 2.9rem;
+  height: 1.3rem;
+  line-height: 1.3rem;
+  text-align: center;
+  border-radius: 0.15rem;
+  color: #fff;
+  margin-left: 0.75rem;
+}
+
+#payment_module.ptzf .orderListPage .orderLine .orderBtn.deleteBtn {
+  width: 3.6rem;
+  color: #888;
+  background-color: #fff;
+  border: 0.05rem solid #dcdcdc;
+}
+
+#payment_module.ptzf .orderListPage .emptyPageTip {
+  position: absolute;
+  top: 6.25rem;
+  text-align: center;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+#payment_module.ptzf .orderListPage .emptyPageTip .tipImg {
+  display: inline-block;
+  width: 4.5rem;
+  height: 3.825rem;
+  background: url("../images/emptypagetip.png") no-repeat;
+  background-size: 100% 100%;
+}
+
+#payment_module.ptzf .orderListPage .emptyPageTip .tipText {
+  color: #bab9b9;
+  margin-top: 0.6rem;
+}
+
+#payment_module .contactPage {
+  position: absolute;
+  top: 0;
+  z-index: 20;
+}
+
+#payment_module .contactPage .contactTitle {
+  padding: 0.7rem 0 0.7rem 0.65rem;
+}
+
+#payment_module .contactPage .contactTitle .content {
+  height: 0.95rem;
+  line-height: 0.95rem;
+  font-size: 0.65rem;
+  font-weight: bold;
+}
+
+#payment_module .contactPage .contactTitle .tips {
+  height: 0.9rem;
+  line-height: 0.9rem;
+  font-size: 0.55rem;
+}
+
+#payment_module .contactPage .contactGroup {
+  border-top: 1px solid #ddd;
+}
+
+#payment_module .contactPage .contactInput {
+  border-top: 1px solid #ddd;
+}
+
+#payment_module .contactPage .phoneInput {
+  width: 3.9rem;
+  height: 2rem;
+  line-height: 2rem;
+  text-align: center;
+  color: #666;
+  font-size: 0.5rem;
+  border-left: 0.05rem solid #e6e6e6;
+}
+
+#payment_module .contactPage .contactInput:first-child {
+  border-top: 0;
+}
+
+#payment_module .contactPage .c_aadress {
+  margin: 0.425rem 0;
+}
+
+#payment_module .contactPage .c_aadress .addRessInput {
+  position: relative;
+}
+
+#payment_module .contactPage .c_aadress .aadressInputMask {
+  position: absolute;
+  left: 3.85rem;
+  top: 0;
+  width: 10.85rem;
+  height: 100%;
+}
+
+#payment_module .contactPage .c_aadress .touchIcon {
+  right: 0;
+  margin-right: 0;
+}
+
+#payment_module .contactPage .c_aadress .aadressTextarea {
+  border-top: 1px solid #ddd;
+  padding: 0.6rem 0;
+  line-height: 0.8rem;
+}
+
+#payment_module .contactPage .c_aadress textarea {
+  display: block;
+  border: 0;
+  width: 100%;
+  height: 2.5rem;
+}
+
+#payment_module .contactPage .c_aadress .counter {
+  text-align: right;
+}
+
+#payment_module .contactPage .confirmBtn {
+  height: 1.875rem;
+  line-height: 1.875rem;
+  width: 8.75rem;
+  margin: 1.25rem auto;
+  font-size: 0.7rem;
+  font-weight: bold;
+}
+
+#payment_module .contactPage #getVCodeBtn.cannotClick {
+  background-color: #f8f8f8;
+  color: #999;
+}
+
+#payment_module.ptzf .contactPage .contactTitle {
+  padding: 2.575rem 0 0.7rem 0.75rem;
+  background-color: #fff;
+}
+
+#payment_module.ptzf .contactPage .contactTitle .content {
+  font-size: 0.7rem;
+}
+
+#payment_module .buyNoticePage {
+  position: absolute;
+  top: 0;
+  z-index: 20;
+}
+
+#payment_module .buyNoticePage .topBar {
+  position: fixed;
+}
+
+#payment_module .buyNoticePage .buyNoticeContent {
+  font-size: 0.55rem;
+  color: #7d7d7d;
+  line-height: 0.75rem;
+  padding: 0.65rem 0.75rem;
+  margin: 2.375rem 0 0.5rem;
+  border-top: 0.05rem solid #ddd;
+  border-bottom: 0.05rem solid #ddd;
+  background-color: #fff;
+}
+
+#payment_module .buyNoticePage .buyNoticeContent .bold {
+  color: #313131;
+  font-weight: bold;
+}
+
+#payment_module .buyNoticePage .buyNoticeContent .rowSpacing {
+  margin-top: 0.5rem;
+}
+
+#payment_module .buyNoticePage .buyNoticeContent .indent {
+  text-indent: 0.75rem;
+}
+
+#payment_module .buyNoticePage .buyNoticeContent .textRight {
+  text-align: right;
+}
+#payment_module {
+  color: #353535
+}
+
+#payment_module .gray_font {
+  color: #888
+}
+
+#payment_module .red_font {
+  color: #ff563b
+}
+
+#payment_module .payInfoLine {
+  padding: 0 .75rem
+}
+
+#payment_module .inputLine .title {
+  color: #888;
+  padding-right: .25rem
+}
+
+#payment_module .topBar.tab {
+  font-size: .6rem;
+  color: #b2b2b2;
+  background-color: #fff;
+  border-bottom: .05rem solid #dadada;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex
+}
+
+#payment_module .topBar.tab .topBarTab {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  -ms-flex-preferred-size: 0
+}
+
+#payment_module .topBar.tab .topBarTab span {
+  display: inline-block;
+  height: 1.875rem;
+  padding: 0 .4rem;
+  box-sizing: border-box
+}
+
+#payment_module .siteBox {
+  min-height: 3.35rem
+}
+
+#payment_module .siteBox .siteInfo .siteItemTop {
+  line-height: 1.2rem;
+  padding: 0;
+  margin-bottom: .5rem
+}
+
+#payment_module .siteBox .siteInfo .siteItemTop .phone {
+  display: inline-block;
+  margin-left: .75rem
+}
+
+#payment_module .siteBox .siteInfo .siteItem {
+  margin-bottom: .45rem
+}
+
+#payment_module .siteBox .orderPaidMsg {
+  font-size: .55rem;
+  line-height: .7rem;
+  color: #b2b2b2;
+  margin: 0 0 .6rem 1.05rem;
+  display: none
+}
+
+#payment_module .siteBox .orderPaidMsg .warnIcon {
+  width: .6rem;
+  height: .6rem;
+  background-image: url("/image/payment/noticeIcon.png?v=201809031720");
+  background-size: 100% 100%;
+  background-position: 0 0
+}
+
+#payment_module .siteBox .orderPaidMsg .msg {
+  vertical-align: middle
+}
+
+#payment_module .siteBox .editContactIcon {
+  width: .25rem;
+  height: .45rem;
+  right: .25rem;
+  padding: .5rem;
+  background-origin: content-box;
+  background-image: url("/image/payment/rightArrowIcon.png?v=201810101713");
+  background-repeat: no-repeat;
+  background-size: 100% 100%
+}
+
+#payment_module .orderDetail .commodityBox {
+  height: 4.75rem;
+  padding: .5rem .5rem .5rem 4.75rem;
+  box-sizing: border-box
+}
+
+#payment_module .orderDetail .commodityImg {
+  height: 3.75rem;
+  left: .5rem;
+  top: .5rem
+}
+
+#payment_module .orderDetail .commodityName {
+  height: 1.7rem;
+  line-height: .85rem;
+  margin: 0 0 1.4rem
+}
+
+#payment_module .orderDetail .commodityPrice {
+  font-size: .55rem;
+  line-height: .65rem;
+  color: #888;
+  margin: 0
+}
+
+#payment_module .orderDetail .commodityPrice .oriPrice {
+  color: #c1c1c1;
+  margin-left: .25rem
+}
+
+#payment_module .orderDetail .commodityPrice .discount {
+  display: inline-block;
+  width: 3.25rem;
+  height: .75rem;
+  font-size: .5rem;
+  line-height: .75rem;
+  text-align: center;
+  border-radius: .375rem;
+  color: #ff563b;
+  background-color: #ffddd8;
+  margin-left: .25rem;
+  text-shadow: -1px -1px 0 #fff, 0px -1px 0 #fff, 1px -1px 0 #fff, 1px 0 0 #fff, 1px 1px 0 #fff, 0px 1px 0 #fff, -1px 1px 0 #fff, -1px 0 0 #fff
+}
+
+#payment_module .orderPage .orderDetail {
+  padding: .75rem .75rem 0;
+  margin-top: .5rem;
+  background-color: #fff
+}
+
+#payment_module .orderPage .orderDetail .inputLine:nth-of-type(3) {
+  border-top: .05rem solid #ddd
+}
+
+#payment_module .orderPage .orderExplain {
+  padding: .7rem .75rem 0
+}
+
+#payment_module .orderPage .buyNotice {
+  padding: .925rem .75rem 0
+}
+
+#payment_module .orderPage .bottomBar {
+  padding-right: 6.9rem
+}
+
+#payment_module .orderPage .bottomBar .confirmBtn {
+  width: 6.1rem
+}
+
+#payment_module .orderPage .groupInfo {
+  min-height: 1.75rem;
+  padding: .75rem;
+  color: #fff
+}
+
+#payment_module .orderPage .groupInfo .payTimeBox {
+  float: right;
+  text-align: right
+}
+
+#payment_module .orderPage .groupInfo .payTimeBox .lessDay {
+  font-size: .5rem;
+  line-height: .6rem
+}
+
+#payment_module .orderPage .groupInfo .payTimeBox .lessTime span {
+  display: inline-block;
+  width: 1.05rem;
+  height: 1rem;
+  line-height: 1rem;
+  text-align: center;
+  border-radius: .2rem;
+  color: #ff563b;
+  background-color: #fff;
+  margin: .2rem .2rem 0
+}
+
+#payment_module .orderPage .groupInfo .payTimeBox .lessTime span:first-of-type {
+  margin-left: 0
+}
+
+#payment_module .orderPage .groupInfo .payTimeBox .lessTime span:last-of-type {
+  margin-right: 0
+}
+
+#payment_module .orderPage .groupInfo .groupResult {
+  font-size: .7rem
+}
+
+#payment_module .orderPage .groupInfo .groupTip {
+  font-size: .55rem;
+  line-height: .8rem;
+  margin-top: .1rem
+}
+
+#payment_module .orderPage .realPayment .money {
+  position: absolute;
+  right: 0;
+  font-size: .7rem;
+  font-weight: bold
+}
+
+#payment_module .orderPage .bottomBtn {
+  box-sizing: border-box;
+  width: 100%;
+  height: 2.1rem;
+  color: #888;
+  font-size: .65rem;
+  line-height: 2.1rem;
+  text-align: center;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  border-top: .05rem solid #ddd;
+  background-color: #fff;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex
+}
+
+#payment_module .orderPage .bottomBtn .staticBtnItem {
+  position: relative;
+  width: 4.5rem
+}
+
+#payment_module .orderPage .bottomBtn .flexBtnItem {
+  color: #fff;
+  -webkit-box-flex: 1 1 0;
+  -webkit-flex: 1 1 0;
+  -ms-flex: 1 1 0;
+  flex: 1 1 0
+}
+
+#payment_module .orderPage .bottomBtn .line {
+  position: absolute;
+  width: .025rem;
+  height: 1.4rem;
+  background-color: #dadada;
+  left: 0;
+  top: .35rem
+}
+
+#payment_module .orderPage .siteBox .siteInfo {
+  padding-right: .6rem
+}
+
+#payment_module .orderPage #groupMemberPoup .title {
+  font-size: .7rem;
+  color: #888;
+  line-height: .8rem;
+  text-align: center;
+  padding: .7rem 0 .95rem
+}
+
+#payment_module .orderPage #groupMemberPoup .memberBox {
+  padding-left: 1.25rem
+}
+
+#payment_module .orderPage #groupMemberPoup .memberBox .headImg {
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50% 50%;
+  margin: 0 .75rem .75rem 0
+}
+
+#payment_module .orderPage #groupMemberPoup .bottomTip {
+  font-size: .55rem;
+  color: #b2b2b2;
+  text-align: center;
+  line-height: 1.75rem;
+  border-top: 1px solid #dcdcdc
+}
+
+#payment_module .orderListPage .orderList {
+  padding-bottom: 2.2rem
+}
+
+#payment_module .orderListPage .orderLine {
+  margin: .5rem .4rem;
+  border-radius: .2rem;
+  border: 1px solid #dcdcdc
+}
+
+#payment_module .orderListPage .orderLine:last-of-type {
+  margin-bottom: 1.25rem
+}
+
+#payment_module .orderListPage .orderLine .contentBox {
+  padding: 0 .6rem
+}
+
+#payment_module .orderListPage .orderLine .orderStatus {
+  color: #ff563b;
+  text-align: right;
+  line-height: 1.65rem
+}
+
+#payment_module .orderListPage .orderLine .cutOffRule {
+   height: 1px;
+   background-size: contain;
+  background-image: url("../images/dashed2.png?v=201808201752")
+}
+
+#payment_module .orderListPage .orderLine .orderBottom {
+  font-size: .65rem;
+  color: #888;
+  line-height: 2.25rem;
+  text-align: right
+}
+
+#payment_module .orderListPage .orderLine .orderBottom .num {
+  color: #ff563b
+}
+
+#payment_module .orderListPage .orderLine .orderBtn {
+  display: inline-block;
+  width: 2.9rem;
+  height: 1.3rem;
+  line-height: 1.3rem;
+  text-align: center;
+  border-radius: .15rem;
+  color: #fff;
+  margin-left: .75rem
+}
+
+#payment_module .orderListPage .orderLine .orderBtn.deleteBtn {
+  width: 3.6rem;
+  color: #888;
+  background-color: #fff;
+  border: .05rem solid #dcdcdc
+}
+
+#payment_module .orderListPage .emptyPageTip {
+  position: absolute;
+  top: 6.25rem;
+  text-align: center;
+  left: 50%;
+  transform: translate(-50%, 0)
+}
+
+#payment_module .orderListPage .emptyPageTip .tipImg {
+  display: inline-block;
+  width: 4.5rem;
+  height: 3.825rem;
+  background: url("/image/payment/emptyPageTip.png?v=201810101713") no-repeat;
+  background-size: 100% 100%
+}
+
+#payment_module .orderListPage .emptyPageTip .tipText {
+  color: #bab9b9;
+  margin-top: .6rem
+}
+
+#payment_module .contactPage .contactTitle {
+  padding: 2.575rem 0 .7rem .75rem;
+  background-color: #fff
+}
+
+#payment_module .contactPage .contactTitle .content {
+  font-size: .7rem
+}

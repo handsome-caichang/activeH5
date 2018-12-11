@@ -1,0 +1,707 @@
+* {
+  margin: 0;
+  outline: 0;
+  padding: 0;
+  font-size: 100%;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0)
+}
+
+a {
+  text-decoration: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0.35)
+}
+
+html {
+  height: 100%;
+  font-size: 100%;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  min-height: 100%;
+  font-family: "微软雅黑";
+  font-size: .7rem;
+  line-height: 1.231;
+  -webkit-touch-callout: none;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -moz-box-orient: vertical;
+  -webkit-box-align: stretch;
+  -moz-box-align: stretch;
+  position: relative
+}
+
+img {
+  -ms-interpolation-mode: bicubic;
+  vertical-align: middle
+}
+
+.activity-lottery-winning {
+  background-color: #572967;
+  min-width: 16rem;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  height: 100%
+}
+
+.activity-coupon-winning {
+  background-color: #8d0001
+}
+
+.activity-coupon-end {
+  background-color: #8d0001
+}
+
+.activity-lottery-winning .main {
+  position: relative;
+  background-color: #ff534d
+}
+
+#outer-cont {
+  z-index: 5;
+  position: relative;
+  width: 16rem;
+  height: 346px;
+}
+
+#outer-cont .zp {
+  position: absolute
+}
+
+#newAwardShow {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: -0.6rem
+}
+
+.soundIcon {
+  z-index: 100
+}
+
+.poupFooter {
+  position: absolute !important;
+  bottom: .75rem;
+  left: 0rem;
+  right: 0rem
+}
+
+#outer {
+  margin: 0 auto;
+  display: block
+}
+
+#outerImg {
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+  width: 14.8rem;
+  height: 14.8rem;
+  left: .5rem;
+  position: absolute
+}
+
+#inner {
+  z-index: 5;
+  position: absolute;
+  top: 4.05rem;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 5.6rem;
+  height: 6.45rem;
+  cursor: pointer
+}
+
+#outer img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  margin: 0 auto
+}
+
+#inner img {
+  width: 67%;
+  height: 83%;
+  display: block;
+  margin: 0 auto
+}
+
+.outer-background {
+  height: 7.05rem;
+  position: absolute;
+  width: 100%;
+  top: 9.8rem
+}
+
+.gameInfoBox {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0
+}
+
+#outercont {
+  position: relative;
+  left: 0;
+  right: 0
+}
+
+.cover {
+  width: 16rem;
+  max-width: 24rem;
+  margin: 0 auto;
+  position: relative
+}
+
+.cover img {
+  width: 16rem
+}
+
+#scratchpad,
+#prize {
+  position: absolute;
+  width: 7.5rem;
+  height: 2rem;
+  top: 7rem;
+  left: 5.25rem;
+  text-align: center;
+  font-size: 1rem;
+  line-height: 2rem;
+  color: #333
+}
+
+.btn-cont {
+  position: absolute;
+  bottom: .15rem;
+  right: .15rem;
+  display: none
+}
+
+.home .content {
+  position: relative;
+  bottom: 0;
+  left: 0;
+  right: 0
+}
+
+.main img {
+  max-width: 100%;
+  border: 0 none
+}
+
+.startBtn {
+  width: 9.15rem;
+  height: 2.25rem;
+  background-repeat: no-repeat;
+  margin: 0 auto;
+  background-size: contain
+}
+
+.theTextLimitBox {
+  height: 5rem;
+  width: 16rem;
+  left: 0;
+  right: 0;
+  position: absolute
+}
+
+.home .content .center_txt {
+  text-align: center;
+  line-height: 1.2rem;
+  padding-bottom: .25rem
+}
+
+.home .content .ipt_num {
+  color: #fa5208;
+  font-size: .6rem;
+  margin: 0rem .25rem;
+  display: inline-block
+}
+
+.txt_style_1 {
+  color: #fcfaf8;
+  font-size: .6rem
+}
+
+.line_txt {
+  color: white;
+  margin-bottom: 1rem;
+  padding: 0rem .5rem;
+  font-size: .7rem
+}
+
+.line_txt span {
+  display: block
+}
+
+.ipt_num a {
+  color: #fff500;
+  font-size: .7rem
+}
+
+.editTarget-deviceLine {
+  -webkit-transform-origin: 50% 100%;
+  -moz-transform-origin: 50% 100%;
+  -ms-transform-origin: 50% 100%;
+  -o-transform-origin: 50% 100%;
+  transform-origin: 50% 100%
+}
+
+.main #xydzp_homeBgBox {
+  width: 100%
+}
+
+.bottomSkill {
+  display: none !important
+}
+
+.joinNumLine,
+.totalDraw,
+.dayDraw4Total,
+.dayDraw {
+  text-shadow: 1px 0 0 #fff, -1px 0 0 #fff, 0px 1px 0 #fff, 0px -1px 0 #fff
+}
+
+.joinNumLine span,
+.totalDraw span,
+.dayDraw4Total span,
+.dayDraw span {
+  text-shadow: 1px 0 0 #fff, -1px 0 0 #fff, 0px 1px 0 #fff, 0px -1px 0 #fff
+}
+
+.joinNumLine,
+.dayDraw {
+  line-height: 31px
+}
+
+.content .poupMainBox {
+  border: .09rem dotted white;
+  border-radius: .2rem;
+  background-color: #fe675f;
+  color: #fff;
+  margin: 1.1rem .2rem .2rem !important;
+  width: auto !important;
+  padding: .9rem .25rem .75rem
+}
+
+.titleTextBox {
+  margin-bottom: .35rem
+}
+
+.titleImgBox {
+  width: 14rem;
+  height: 2rem;
+  z-index: 699;
+  position: relative;
+  margin: 0 auto;
+  margin-bottom: .85rem
+}
+
+#ruleBox {
+  padding-bottom: .2rem
+}
+
+#actExplain {
+  position: relative
+}
+
+#myAwardBox {
+  position: relative
+}
+
+.ruleBoxBg {
+  position: absolute;
+  width: 15.3rem;
+  margin: auto;
+  left: 0;
+  right: 0;
+  top: 0 !important;
+  z-index: 0 !important
+}
+
+.infoBoxBg {
+  position: absolute;
+  width: 15.3rem;
+  margin: auto;
+  left: 0;
+  right: 0;
+  top: 0 !important;
+  z-index: 0 !important
+}
+
+.awardBoxBg {
+  position: absolute;
+  width: 15.3rem;
+  margin: auto;
+  left: 0;
+  right: 0;
+  top: 0 !important;
+  z-index: 0 !important
+}
+
+.rowSpacing .awardItem {
+  margin-bottom: .2rem
+}
+
+.content .infoDeviceLine {
+  height: .06rem;
+  background-color: #fff;
+  opacity: .4;
+  margin: .35rem 0
+}
+
+#ruleBox .awardTitleText {
+  font-weight: 600
+}
+
+.new_attentionBox {
+  position: static;
+  margin-top: 1rem
+}
+
+.poupLine {
+  font-size: 100%;
+  line-height: inherit;
+  padding: 0;
+  z-index: 699;
+  margin-top: .5rem
+}
+
+#awardContactInfo .updateBtn {
+  color: #fff000;
+  border: 0;
+  float: right;
+  margin: -1.1rem .5rem 0 0;
+  width: auto !important
+}
+
+#awardContactInfo .contactItem {
+  width: 10rem;
+  margin-top: .2rem;
+  margin-left: 0
+}
+
+.main .homeBgBox {
+  position: absolute;
+  background-repeat: no-repeat;
+  background-size: 16rem auto
+}
+
+.content .showAwardBox {
+  position: static
+}
+
+#WinnersBox {
+  overflow: hidden;
+  height: 7.88rem;
+  top: 0 !important
+}
+
+#WinnersBox #winnerSlideBox {
+  margin-top: 11px
+}
+
+#WinnersBox img {
+  width: 2.2rem;
+  margin-right: .5rem;
+  vertical-align: bottom
+}
+
+#WinnersBox .editBox {
+  position: absolute;
+  height: 8rem;
+  width: 15.5rem;
+  margin: auto;
+  left: 0;
+  right: 0
+}
+
+.hideWinnerBox {
+  display: none !important
+}
+
+.showAuto {
+  position: relative;
+  animation: myShow .5s;
+  -webkit-animation: myShow .5s
+}
+
+@keyframes myShow {
+  from {
+    top: -159px
+  }
+
+  to {
+    top: 0
+  }
+}
+
+@-webkit-keyframes myShow {
+  from {
+    top: -159px
+  }
+
+  to {
+    top: 0
+  }
+}
+
+.codeInfoBox {
+  width: auto;
+  height: auto;
+  border: 0;
+  border-radius: 0;
+  margin: 0;
+  position: relative;
+  padding-top: 0
+}
+
+.repeatDraw,
+.hideLi {
+  display: none
+}
+
+.xydzp_GiftPos {
+  margin-top: -1.25rem
+}
+
+.xydzp_ManageGiftPos {
+  margin-top: 3rem
+}
+
+#resule-gift-foot,
+#next-resule-gift-foot {
+  margin-top: -1.2rem
+}
+
+#resule-gift-rank .giftRank,
+#next-resule-gift-rank .giftRank {
+  text-shadow: 1px 0 0 #fff, -1px 0 0 #fff, 0px 1px 0 #fff, 0px -1px 0 #fff
+}
+
+#resule-gift-goods .giftGoods,
+#next-resule-gift-goods .giftGoods {
+  text-shadow: 1px 0 0 #fff, -1px 0 0 #fff, 0px 1px 0 #fff, 0px -1px 0 #fff
+}
+
+#luckContainer .imgContainer.absCenter {
+  position: relative
+}
+
+.showAttentionBtn {
+  visibility: visible !important
+}
+
+#resule-gift-luck {
+  margin-top: 3.5rem
+}
+
+#informLine {
+  height: 1.6rem
+}
+
+#newInformBtn {
+  margin-top: .65rem;
+  margin-right: .1rem;
+  padding-left: .8rem;
+  float: right
+}
+
+pre {
+  white-space: pre-wrap !important;
+  word-wrap: break-word !important
+}
+
+#joinNumLine {
+  color: #fa5208
+}
+
+#faiImgBox .cannotGetThePriceBox {
+  height: 19.6rem
+}
+
+.luckCont_manage {
+  top: 4rem !important;
+  height: 0
+}
+
+.luckCont_game {
+  top: 2.8rem !important;
+  height: 0
+}
+
+#luckContainer .giftFoot {
+  width: 10rem
+}
+
+#slideExample .uerItem {
+  width: 14.6rem;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  display: inline-block
+}
+
+#slideExample .uerItem .winner {
+  line-height: 2.2rem
+}
+
+#slideExample .uerItem.slideAwardName {
+  line-height: 2.2rem
+}
+
+#winnerSlideBox .uerItem {
+  width: 14.6rem;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  display: inline-block
+}
+
+#winnerSlideBox .uerItem .winner {
+  line-height: 2.2rem
+}
+
+#winnerSlideBox .uerItem.slideAwardName {
+  line-height: 2.2rem
+}
+
+.awardDetailText {
+  line-height: inherit !important
+}
+
+#activeHost {
+  word-wrap: break-word;
+  word-break: normal
+}
+
+#myAwardInfo .awardNameDef {
+  display: inline-block;
+  width: 6rem;
+  vertical-align: bottom;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden
+}
+
+.awardLimitBox {
+  display: inline-block;
+  width: 11rem;
+  vertical-align: bottom;
+  text-overflow: ellipsis;
+  overflow: hidden
+}
+
+#myAwardInfo .awardName {
+  display: inline-block;
+  width: 6rem;
+  vertical-align: bottom;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden
+}
+
+#myAwardInfo .awardInfoDetail {
+  margin-left: .5rem
+}
+
+#activeRuleInfoBox {
+  height: auto !important
+}
+
+.resuleBox #resule-gift-box {
+  margin-top: 0 !important
+}
+
+#hdDialog {
+  min-height: 9rem;
+  width: 12.8rem;
+  overflow: visible;
+  display: flex;
+  flex-direction: column;
+  border-radius: .2rem;
+  text-align: left
+}
+
+#hdDialog .dialog_content {
+  flex: 2
+}
+
+#hdDialog .dialog_footer {
+  flex: 1
+}
+
+#hdDialog .dialog_footer .dialog_btn {
+  height: 1.88rem;
+  line-height: 1.88rem;
+  width: 76%;
+  margin: .5rem auto .75rem
+}
+
+#hdDialog .closeImg_top {
+  position: absolute;
+  width: 1.37rem;
+  height: 1.88rem;
+  right: 0;
+  top: -1.88rem
+}
+
+#hdDialog .closeImg_bottom {
+  position: absolute;
+  width: 1.5rem;
+  height: 1.5rem;
+  bottom: -3rem;
+  left: 50%;
+  margin-left: -0.75rem
+}
+
+#hdDialog .dialog_content .chatInfo {
+  padding: 1.4rem 1rem;
+  color: #888
+}
+
+#hdDialog .dialog_content .chatInfo p {
+  line-height: .8rem;
+  margin-bottom: 1.2rem
+}
+
+#hdDialog .dialog_content .chatInfo ul li {
+  line-height: 1.45rem;
+  color: #bfbfbf
+}
+
+#hdDialog .dialog_content .chatInfo ul li span {
+  padding-left: .2rem;
+  color: #888
+}
+
+.default_btn {
+  width: 10.25rem;
+  height: 2.2rem;
+  line-height: 2.2rem;
+  background: #4381fd;
+  margin: 1rem auto;
+  text-align: center;
+  border-radius: 1.1rem;
+  font-size: .7rem;
+  color: #fff;
+  box-shadow: 6px 6px 18px rgba(0, 70, 209, 0.4)
+}
+
+.attentionBox_mobi2 {
+  width: 5rem;
+  line-height: 1.6rem;
+  background: #fff;
+  color: #000;
+  left: 50%;
+  margin-left: -2.5rem;
+  bottom: 2rem;
+  border-radius: 4px
+}
