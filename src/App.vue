@@ -25,8 +25,9 @@
       <div class="info"><span id="loadPercent">1</span>%</div>
       <div id="userPreload" data-src="http://7020498.h40.faiusr.com/4/8TOcE262U1Mx4GN0gT7xM9N1Y2Y1cDO.png"></div>
     </div>
-    
-    <router-view/>
+    <transition name="slide-fade" transition>
+        <router-view />
+    </transition>
   </div>
 </template>
 
@@ -39,7 +40,7 @@ export default {
 <style>
   @import "./assets/css/base.scss";
   html,body {
-    font-size: 23.4375px;
+    font-size: 23.4375px;;
     width: 100%;
     height: 100%;
     margin: 0;
@@ -49,4 +50,14 @@ export default {
     overflow: hidden auto;
     height: 100%;
   }
+  .slide-fade-enter-active {
+    transition: all 0.3s ease;
+  }
+  .slide-fade-leave-active {
+    transition: all 0.3s cubic-bezier(1.0, 0.5, 0.8, 1.0);
+  }
+  .slide-fade-enter, .slide-fade-leave-to {
+    transform: translateX(375px);
+  }
+
 </style>

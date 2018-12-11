@@ -1,0 +1,237 @@
+
+/* 
+    如果一共5个或者6个奖品，那么为8个区块
+    每个区块之间相差45度，一半为22.5
+
+    如果一共3个或者 4个奖品，那么为6个区块
+    那么每个区块之间相差60，一半为30
+
+    如果只有1个或者2个奖品，那么为4个区块
+    每个区块之间相差90，一半为45
+
+    排列顺序， 0 谢谢参与，1234代表奖项，99代表安慰奖
+    1个奖项，0,0,0,1
+    2个奖项，0,2,0,1
+    3个奖项，0,3,0,2,0,1
+    4个奖项，0,4,3,2,0,1
+    5个奖项，0,5,0,4,3,2,0,1
+    6个奖项，0,6,5,4,3,2,0,1
+*/ 
+
+/* 如果奖品为5个或者6个的旋转角度  .5角度舍去-------------------*/
+
+ /* 旋转20°   */
+@keyframes rotate22 {
+  from {
+    transform: rotateZ(0deg)
+  }
+
+  to {
+    transform: rotateZ(-1822deg)
+  }
+}
+
+.rotate22 {
+  animation: rotate30 5s ease forwards;
+}
+
+ /* 旋转67°  */
+@keyframes rotate67 {
+  from {
+    transform: rotateZ(0deg)
+  }
+
+  to {
+    transform: rotateZ(-1867deg)
+  }
+}
+
+.rotate67 {
+  animation: rotate67 5s ease forwards;
+}
+
+
+ /* 旋转112°  */
+@keyframes rotate112 {
+  from {
+    transform: rotateZ(0deg)
+  }
+
+  to {
+    transform: rotateZ(-1912deg)
+  }
+}
+
+.rotate112 {
+  animation: rotate112 5s ease forwards;
+}
+
+ /* 旋转157°  */
+@keyframes rotate157 {
+  from {
+    transform: rotateZ(0deg)
+  }
+
+  to {
+    transform: rotateZ(-1957deg)
+  }
+}
+
+.rotate157 {
+  animation: rotate157 5s ease forwards;
+}
+
+ /* 旋转202°  */
+@keyframes rotate202 {
+  from {
+    transform: rotateZ(0deg)
+  }
+
+  to {
+    transform: rotateZ(-2002deg)
+  }
+}
+
+.rotate202 {
+  animation: rotate202 5s ease forwards;
+}
+
+ /* 旋转247°  */
+@keyframes rotate247 {
+  from {
+    transform: rotateZ(0deg)
+  }
+
+  to {
+    transform: rotateZ(-2047deg)
+  }
+}
+
+.rotate247 {
+  animation: rotate247 5s ease forwards;
+}
+
+ /* 旋转292°  */
+@keyframes rotate292 {
+  from {
+    transform: rotateZ(0deg)
+  }
+
+  to {
+    transform: rotateZ(-2092deg)
+  }
+}
+
+.rotate292 {
+  animation: rotate292 5s ease forwards;
+}
+
+ /* 旋转337°  */
+@keyframes rotate337 {
+  from {
+    transform: rotateZ(0deg)
+  }
+
+  to {
+    transform: rotateZ(-2137deg)
+  }
+}
+
+.rotate337 {
+  animation: rotate337 5s ease forwards;
+}
+
+
+
+/* 奖品为4或者3时候旋转角度------------------------------------- */
+
+/* 旋转30*/
+@keyframes rotate30 {
+  from {
+    transform: rotateZ(0deg)
+  }
+
+  to {
+    transform: rotateZ(-1830deg)
+  }
+}
+.rotate30 {
+    animation: rotate30 3s ease forwards;
+}
+
+
+/* 旋转90°  */
+@keyframes rotate90 {
+  from {
+    transform: rotateZ(0deg)
+  }
+
+  to {
+    transform: rotateZ(-1890deg)
+  }
+}
+
+.rotate90 {
+  animation: rotate90 5s ease forwards;
+}
+
+
+ /* 旋转150°  */
+@keyframes rotate150 {
+  from {
+    transform: rotateZ(0deg)
+  }
+
+  to {
+    transform: rotateZ(-1950deg)
+  }
+}
+
+.rotate150 {
+  animation: rotate150 5s ease forwards;
+}
+
+ /* 旋转210°  */
+@keyframes rotate210 {
+  from {
+    transform: rotateZ(0deg)
+  }
+
+  to {
+    transform: rotateZ(-2010deg)
+  }
+}
+
+.rotate210 {
+  animation: rotate210 5s ease forwards;
+}
+
+ /* 旋转270°  */
+@keyframes rotate270 {
+  from {
+    transform: rotateZ(0deg)
+  }
+
+  to {
+    transform: rotateZ(-2070deg)
+  }
+}
+
+.rotate270 {
+  animation: rotate270 5s ease forwards;
+}
+
+ /* 旋转330°  */
+@keyframes rotate330 {
+  from {
+    transform: rotateZ(0deg)
+  }
+
+  to {
+    transform: rotateZ(-2130deg)
+  }
+}
+
+.rotate330 {
+  animation: rotate330 5s ease forwards;
+}

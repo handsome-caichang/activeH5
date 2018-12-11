@@ -2,36 +2,36 @@
 <div class="activity-lottery-winning body">
     <div class="main home" style="height: 100%;">
         <div class="editTarget-homeBoxBg hd-Special-bgImgInfo">
-            <div class="titleImg titleDown" style="position: relative; height: 7.5rem;">
+            <div class="titleImg titleDown" style="height: 7.5rem;">
                 <img id="titleBox" class="editTarget-titleBox abs" src="//hdg.faisys.com/image/xydzp/title.png"/>
             </div>
             <div id="outercont">
-                <div id="outer-cont" class="editTarget-wrap layerId-42 defBgColor" title="点击后编辑" style="cursor: pointer; z-index: 4;"> 
+                <div id="outer-cont" class="editTarget-wrap layerId-42 defBgColor" style="cursor: pointer; z-index: 4;" :class="rotateClass"> 
                     <img id="outerImg" class="editTarget-rotatePan" :src="rotatePan" style="width: 346px; height: 346px; left: 12.4375px; top: 0.4375px;" /> 
                     <div id="newAwardShow">
-                        <img class="zp editTarget-zp0" style="width: 84.925px; height: 84.925px; top: 145.038px; left: 145.038px; transform: rotate(30deg) translateY(-101.01px);" :src="zp0" />
+                        <img class="zp" style="width: 84.925px; height: 84.925px; top: 145.038px; left: 145.038px; transform: rotate(30deg) translateY(-101.01px);" :src="zp0" />
                         <img class="editTarget-deviceLine abs" style="width: 1.875px; height: 144.141px; top: 43.3594px; left: 186.328px; transform: rotate(0deg);" :src="device" />
-                        <img class="zp editTarget-zp2" style="width: 84.925px; height: 84.925px; top: 145.038px; left: 145.038px; transform: rotate(90deg) translateY(-101.01px);" :src="zp2" />
+                        <img class="zp" style="width: 84.925px; height: 84.925px; top: 145.038px; left: 145.038px; transform: rotate(90deg) translateY(-101.01px);" :src="zp2" />
                         <img class="editTarget-deviceLine abs" style="width: 1.875px; height: 144.141px; top: 43.3594px; left: 186.328px; transform: rotate(60deg);" :src="device" />
-                        <img class="zp editTarget-zp0" style="width: 84.925px; height: 84.925px; top: 145.038px; left: 145.038px; transform: rotate(150deg) translateY(-101.01px);" :src="zp0" />
+                        <img class="zp" style="width: 84.925px; height: 84.925px; top: 145.038px; left: 145.038px; transform: rotate(150deg) translateY(-101.01px);" :src="zp0" />
                         <img class="editTarget-deviceLine abs" style="width: 1.875px; height: 144.141px; top: 43.3594px; left: 186.328px; transform: rotate(120deg);" :src="device" />
-                        <img class="zp editTarget-zp3" style="width: 84.925px; height: 84.925px; top: 145.038px; left: 145.038px; transform: rotate(210deg) translateY(-101.01px);" :src="zp3" />
+                        <img class="zp" style="width: 84.925px; height: 84.925px; top: 145.038px; left: 145.038px; transform: rotate(210deg) translateY(-101.01px);" :src="zp3" />
                         <img class="editTarget-deviceLine abs" style="width: 1.875px; height: 144.141px; top: 43.3594px; left: 186.328px; transform: rotate(180deg);" :src="device" />
-                        <img class="zp editTarget-zp0" style="width: 84.925px; height: 84.925px; top: 145.038px; left: 145.038px; transform: rotate(270deg) translateY(-101.01px);" :src="zp0" />
+                        <img class="zp" style="width: 84.925px; height: 84.925px; top: 145.038px; left: 145.038px; transform: rotate(270deg) translateY(-101.01px);" :src="zp0" />
                         <img class="editTarget-deviceLine abs" style="width: 1.875px; height: 144.141px; top: 43.3594px; left: 186.328px; transform: rotate(240deg);" :src="device" />
-                        <img class="zp editTarget-zp1" style="width: 84.925px; height: 84.925px; top: 145.038px; left: 145.038px; transform: rotate(330deg) translateY(-101.01px);" :src="zp1" />
+                        <img class="zp" style="width: 84.925px; height: 84.925px; top: 145.038px; left: 145.038px; transform: rotate(330deg) translateY(-101.01px);" :src="zp1" />
                         <img class="editTarget-deviceLine abs" style="width: 1.875px; height: 144.141px; top: 43.3594px; left: 186.328px; transform: rotate(300deg);" :src="device" />
                     </div> 
                 </div>
-                <div id="inner" class="startBtnImg">
+                <div id="inner" class="startBtnImg" @click="startAward">
                     <img src="//hdg.faisys.com/image/xydzp/startBtn.png" />
                 </div>
             </div>
             <div class="content">
-                <div style="margin-bottom:70px;margin-top: 34px;">
-                    <div class="center_txt" style="margin-bottom:1rem;position:relative;height:2.25rem;">
-                        <div class="txt_style_1 joinNumLine absCenter">已有<span class="ipt_num joinNumLineText">62614</span>人参与</div>
-                        <div id="drawInfo" class="txt_style_1 absCenter editTarget-drawInfo abs" style="top:1.25rem;left:2.5rem;">
+                <div style="margin-bottom:70px;">
+                    <div class="center_txt">
+                        <div class="txt_style_1 joinNumLine ">已有<span class="ipt_num joinNumLineText">62614</span>人参与</div>
+                        <div class="txt_style_1 ">
                             <div class="dayDraw" style="font-size: 0.6rem; color: rgb(250, 82, 8);">
                                 您今天还有
                                 <span class="ipt_num specil dayDrawCount" style="font-size: 0.6rem; color: rgb(250, 82, 8);">3</span>
@@ -51,7 +51,7 @@
                                     <span class="colon">：</span>
                                     <span class="awardText awardNameDef">价值100元礼品</span>
                                 </div>
-                                <span class="awardInfoDetail">查看详情</span>
+                                <span class="awardInfoDetail" @click="gotoDetail">查看详情</span>
                             </div>
                             <div class="infoDeviceLine"></div>
                             <div>
@@ -110,8 +110,7 @@
             </div>
         </div>
     </div>
-
-    <div id="loadingToast" class="hide">
+    <div id="loadingToast" :class="{'hide': !loadinData}">
         <div class="weui-mask_transparent"></div>
         <div class="weui-toast">
             <i class="weui-loading weui-icon_toast"></i>
@@ -119,7 +118,7 @@
         </div>
     </div>
 
-    <!-- <resule-box></resule-box> -->
+    <resule-box v-if="noAward" @tralg="tralg"></resule-box>
 </div>
 </template>
 
@@ -142,10 +141,84 @@ export default {
             zp1,
             zp2,
             zp3,
+            currentAward: '0', // 0 谢谢参与 ， 1 一等奖，2 二等奖， 3 三等奖， 4 四等奖，5 五等奖， 99 安慰奖
+            awardList: [ // 当前奖品
+                {
+                    levelName: '一等奖',
+                    id: '1',
+                    isConsolation: false,
+                    rotateNum: '330'
+                },
+                {
+                    levelName: '二等奖',
+                    id: '2',
+                    isConsolation: false,
+                    rotateNum: '210'
+                },
+                {
+                    levelName: '三等奖',
+                    id: '3',
+                    isConsolation: false,
+                    rotateNum: '90'
+                },
+            ],
+            noAward: false, // 抽奖弹窗
+            loadinData: false, // 加载抽奖
+            endChoujian: true, // 第一次刚进来的时候，不用旋转
+        }
+    },
+    computed: {
+        rotateClass() {
+            let className = 'rotate', anweiNum = 30;
+            // if (this.awardList.length == 3 || this.awardList.length == 4) {
+            //     anweiNum = 30;
+            // }else if (this.awardList.length == 1 || this.awardList.length == 2) {
+            //     anweiNum = 45;
+            // }else if(this.awardList.length == 5 || this.awardList.length == 6) {
+            //     anweiNum = 22;
+            // }
+            if (this.endChoujian) return '';
+            switch (this.currentAward) {
+                case '0':
+                    return className + anweiNum;
+                    break;
+                case '1':
+                    return className + 330;
+                    break;
+                case '2':
+                    return className + 210;
+                    break;
+                case '3':
+                    return className + 90;
+                    break;
+                default:
+                    break;
+            }
         }
     },
     components: {
         resuleBox
+    },
+    methods: {
+        gotoDetail() {
+            this.$router.push('awardDetail/123');
+        },
+        startAward() {
+            this.loadinData = true;
+            setTimeout(() => {
+                this.loadinData = false;
+                this.endChoujian = false;
+                this.currentAward = '1';
+                setTimeout( ()=> {
+                    this.endChoujian = true;
+                    this.noAward = true;
+                }, 5000)
+            }, 3000)
+        },
+        tralg() {
+            this.noAward = false;
+            this.endChoujian = true;
+        }
     }
 };
 
@@ -153,7 +226,11 @@ export default {
 
 <style scoped>
 @import "./css/luck.scss";
+@import "./css/animations.scss";
 
+.txt_style_1 {
+    text-align: center;
+}
 .hd-Special-bgImgInfo {
     background-image: url(https://hdg.faisys.com/image/xydzp/homeBg.jpg);
     background-position: center center;
@@ -174,8 +251,6 @@ export default {
 }
 
 .joinNumLine {
-    top: 0rem;
-    left: 3.6rem;
     color: rgb(250, 82, 8);
     font-size: 0.6rem;
     text-shadow: rgb(255, 255, 255) 1px 0px 0px, rgb(255, 255, 255) -1px 0px 0px, rgb(255, 255, 255) 0px 1px 0px, rgb(255, 255, 255) 0px -1px 0px;

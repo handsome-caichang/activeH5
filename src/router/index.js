@@ -1,12 +1,14 @@
 import Vue from 'vue'
 import Router from 'vue-router'
+// 拼团
 import Home from '@/pages/pingtuan/home'
 import Product from '@/pages/pingtuan/child/product'
 import Order from "@/pages/pingtuan/child/order";
 import Detail from "@/pages/pingtuan/child/detail";
-
-import Niudan from "@/pages/niudan/niudan";
+/* 抽奖大转盘 */
 import LuckDraw from "@/pages/luckDraw/luckDraw";
+/* 奖品详情 */
+import AwardDetail from "@/pages/awardDetail/awardDetail";
 
 Vue.use(Router)
 
@@ -37,14 +39,14 @@ export default new Router({
       ]
     },
     {
-      path: "/niudan",
-      name: "niudan",
-      component: Niudan
-    },
-    {
       path: "/luckDraw",
       name: "luckDraw",
-      component: LuckDraw
+      component: LuckDraw,
+    },
+    {
+      path: "/awardDetail/:id",
+      name: "awardDetail",
+      component: AwardDetail
     }
   ]
 });
