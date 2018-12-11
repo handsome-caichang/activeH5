@@ -43,7 +43,7 @@ img {
 
 .activity-lottery-winning {
   background-color: #572967;
-  min-width: 16rem;
+  // min-width: 375px;
   overflow-x: hidden;
   overflow-y: scroll;
   height: 100%
@@ -62,17 +62,15 @@ img {
   background-color: #ff534d
 }
 
-#outer-cont {
+.outer-cont {
   z-index: 5;
   position: relative;
-  width: 16rem;
-  height: 16rem;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-#outer-cont .zp {
+.outer-cont .zp {
   position: absolute
 }
 
@@ -94,15 +92,9 @@ img {
   right: 0rem
 }
 
-#outer {
-  margin: 0 auto;
-  display: block
-}
-
-#outerImg {
+.outer-cont .outerImg {
   transform: translate3d(0, 0, 0);
-  width: 14.8rem;
-  height: 14.8rem;
+  width: 95%;
 }
 
 #inner {
@@ -146,10 +138,11 @@ img {
   right: 0
 }
 
-#outercont {
+.outercont {
   position: relative;
   left: 0;
-  right: 0
+  right: 0;
+  margin-top: 10px;
 }
 
 .cover {

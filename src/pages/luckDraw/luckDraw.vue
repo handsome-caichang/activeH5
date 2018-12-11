@@ -2,12 +2,12 @@
 <div class="activity-lottery-winning body">
     <div class="main home" style="height: 100%;">
         <div class="editTarget-homeBoxBg hd-Special-bgImgInfo">
-            <div class="titleImg titleDown" style="height: 7.5rem;">
-                <img id="titleBox" class="editTarget-titleBox abs" src="//hdg.faisys.com/image/xydzp/title.png"/>
+            <div class="titleImg titleDown">
+                <img id="titleBox" class="editTarget-titleBox" :src="title"/>
             </div>
-            <div id="outercont">
-                <div id="outer-cont" class="editTarget-wrap layerId-42 defBgColor" style="cursor: pointer; z-index: 4;" :class="rotateClass"> 
-                    <img id="outerImg" class="editTarget-rotatePan" :src="rotatePan" style="width: 346px; height: 346px; left: 12.4375px; top: 0.4375px;" /> 
+            <div class="outercont">
+                <div class="outer-cont defBgColor" style="cursor: pointer; z-index: 4;" :class="rotateClass"> 
+                    <img class="outerImg" :src="rotatePan" /> 
                     <div id="newAwardShow">
                         <img class="zp" style="width: 84.925px; height: 84.925px; top: 145.038px; left: 145.038px; transform: rotate(30deg) translateY(-101.01px);" :src="zp0" />
                         <img class="editTarget-deviceLine abs" style="width: 1.875px; height: 144.141px; top: 43.3594px; left: 186.328px; transform: rotate(0deg);" :src="device" />
@@ -24,11 +24,11 @@
                     </div> 
                 </div>
                 <div id="inner" class="startBtnImg" @click="startAward">
-                    <img src="//hdg.faisys.com/image/xydzp/startBtn.png" />
+                    <img :src="startBtn" />
                 </div>
             </div>
             <div class="content">
-                <div style="margin-bottom:70px;">
+                <div style="margin-bottom:70px;margin-top:20px;">
                     <div class="center_txt">
                         <div class="txt_style_1 joinNumLine ">已有<span class="ipt_num joinNumLineText">62614</span>人参与</div>
                         <div class="txt_style_1 ">
@@ -41,7 +41,7 @@
                     </div>
                 </div>
                 <div id="myAwardBox" class="poupMainBox" style="background-color: rgb(254, 103, 95); border-color: rgb(255, 255, 255);">
-                    <div class="titleImgBox editTarget-myAwardImg hd-game-theBg-fillAuto" style="background-image: url(&quot;https://hdg.faisys.com/image/xydzp/myAwardImg.png&quot;); background-position: center center; background-repeat: no-repeat; background-size: 100% 85.1064%;"> </div>
+                    <div class="titleImgBox myAwardImg"></div>
                     <div class="awardBoxBg editTarget-myAwardBox"></div>
                     <div id="myAwardInfo" class="rowSpacing">
                         <div class="">
@@ -69,7 +69,7 @@
                     </div> -->
                 </div>
                 <div id="actExplain" class="poupMainBox " style="background-color: rgb(254, 103, 95); border-color: rgb(255, 255, 255);">
-                    <div class="titleImgBox editTarget-activeRuleImg hd-game-theBg-fillAuto" style="background-image: url(&quot;https://hdg.faisys.com/image/xydzp/activeRuleImg.png&quot;); background-position: center center; background-repeat: no-repeat; background-size: 100% 85.1064%;"></div>
+                    <div class="titleImgBox activeRule"></div>
                     <div class="ruleBoxBg editTarget-ruleBox"></div>
                     <div id="ruleBox">
                         <div id="activeRuleInfoBox" class="poupMainInfo poupMain">
@@ -130,6 +130,9 @@ import zp0 from './image/zp0.png'
 import zp1 from './image/zp1.png'
 import zp2 from './image/zp2.png'
 import zp3 from './image/zp3.png'
+import startBtn from './image/startBtn.png'
+import title from './image/title.png'
+import myAwardImg from './image/myAwardImg.png'
 
 export default {
     name: "luckDraw",
@@ -141,6 +144,9 @@ export default {
             zp1,
             zp2,
             zp3,
+            startBtn,
+            title,
+            activeRule: {},
             currentAward: '0', // 0 谢谢参与 ， 1 一等奖，2 二等奖， 3 三等奖， 4 四等奖，5 五等奖， 99 安慰奖
             awardList: [ // 当前奖品
                 {
@@ -227,12 +233,23 @@ export default {
 <style scoped>
 @import "./css/luck.scss";
 @import "./css/animations.scss";
-
+.activeRule {
+    background-image: url('./image/activeRuleImg.png');
+    background-position: center center; 
+    background-repeat: no-repeat; 
+    background-size: 100% 85.1064%;
+}
+.myAwardImg {
+    background-image: url('./image/myAwardImg.png');
+    background-position: center center; 
+    background-repeat: no-repeat; 
+    background-size: 100% 85.1064%;
+}
 .txt_style_1 {
     text-align: center;
 }
 .hd-Special-bgImgInfo {
-    background-image: url(https://hdg.faisys.com/image/xydzp/homeBg.jpg);
+    background-image: url('./image/homeBg.jpg');
     background-position: center center;
     background-repeat: no-repeat;
     background-color: rgb(254, 103, 95);
@@ -243,11 +260,8 @@ export default {
     background-color: #fff;
 }
 
-.editTarget-titleBox {
-    top: 1rem;
-    left: 0.55rem;
-    width: 14.7rem;
-    height: 5.8rem;
+.titleImg .editTarget-titleBox {
+    width: 80%;
 }
 
 .joinNumLine {
@@ -335,5 +349,10 @@ export default {
     overflow: hidden;
     font-size: 0.75rem; 
     color: rgb(255, 255, 255);
+}
+
+.titleImg {
+    text-align: center;
+    padding-top: 20px;
 }
 </style>
