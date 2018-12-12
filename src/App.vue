@@ -33,7 +33,10 @@
 
 <script>
 export default {
-  name: 'App'
+  name: 'App',
+  created() {
+      window.H5That = this;
+  }
 }
 </script>
 
