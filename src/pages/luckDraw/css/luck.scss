@@ -74,11 +74,13 @@ img {
   position: absolute
 }
 
-#newAwardShow {
+.newAwardShow {
   position: absolute;
   width: 100%;
   left: 0;
   top: 0;
+  right: 0;
+  bottom: 0
 }
 
 .soundIcon {
@@ -118,8 +120,8 @@ img {
 }
 
 #inner img {
-  width: 67%;
-  height: 83%;
+  width: 60%;
+  height: 76%;
   display: block;
   margin: 0 auto
 }
@@ -288,14 +290,6 @@ img {
   margin-bottom: .35rem
 }
 
-.titleImgBox {
-  width: 14rem;
-  height: 2rem;
-  z-index: 699;
-  position: relative;
-  margin: 0 auto;
-  margin-bottom: .85rem
-}
 
 #ruleBox {
   padding-bottom: .2rem
@@ -347,7 +341,7 @@ img {
   height: .06rem;
   background-color: #fff;
   opacity: .4;
-  margin: .35rem 0
+  margin: 5px 0;
 }
 
 #ruleBox .awardTitleText {
@@ -569,36 +563,6 @@ pre {
 #activeHost {
   word-wrap: break-word;
   word-break: normal
-}
-
-#myAwardInfo .awardNameDef {
-  display: inline-block;
-  width: 6rem;
-  vertical-align: bottom;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  overflow: hidden
-}
-
-.awardLimitBox {
-  display: inline-block;
-  width: 11rem;
-  vertical-align: bottom;
-  text-overflow: ellipsis;
-  overflow: hidden
-}
-
-#myAwardInfo .awardName {
-  display: inline-block;
-  width: 6rem;
-  vertical-align: bottom;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  overflow: hidden
-}
-
-#myAwardInfo .awardInfoDetail {
-  margin-left: .5rem
 }
 
 #activeRuleInfoBox {

@@ -1,0 +1,71 @@
+#awardDetailBox.isAngular .awardDetail {
+    width: 100%;
+    background-color: #35a4de;
+    text-align: center;
+    position: relative;
+    padding-bottom: 8px;
+}
+
+#awardDetailBox .awardDetail .awardName {
+    padding-top: 55px;
+    font-size: 24px;
+    word-break: break-word;
+}
+#awardDetailBox {
+    color: #fff;
+}
+.awardDetail .awardCodeTime em {
+    font-style: normal;
+}
+#awardDetailBox .awardDetail .awardCodeTime, 
+#awardDetailBox .awardDetail .codeTimeFixedTerm {
+    font-size: 12px;
+    line-height: 28px;
+}
+#awardDetailBox {
+    position: fixed;
+    z-index: 2000;
+    font-size: .7rem;
+    color: #fff;
+    background-color: #f0eff4;
+    overflow-y: auto;
+}
+#awardDetailBox.isAngular {
+    overflow-y: hidden;
+}
+.codeImgBox {
+    text-align: center;
+    color: #666;
+    background-color: #fff;
+    padding-bottom: 10px;
+}
+
+.isAngular #ticketDetailBox {
+    background: #fff;
+    box-sizing: border-box;
+    padding: 10px;
+    color: #000;
+}
+.isAngular #ticketDetailBox .ticketitle {
+    font-size: 16px;
+    padding-bottom: 8px;
+    border-bottom: solid 1px #d5d5d5;
+    line-height: 20px;
+    position: relative;
+    margin: 0;
+}
+.isAngular #ticketDetailBox .ticketInfo {
+    padding-top: 4px;
+}
+.isAngular #ticketDetailBox .itemList {
+    font-size: 14px;
+    padding: 8px 0;
+}
+#ticketDetailBox .itemList .title {
+    float: left;
+    color: #666;
+}
+#ticketDetailBox .itemList .box {
+    width: auto;
+    margin-left: 70px;
+}

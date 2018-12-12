@@ -217,3 +217,27 @@ pre {
   color: #FFF;
   z-index: 999
 }
+
+.awardCloseIcon {
+    width: 2.25rem;
+    height: 2.25rem;
+    background: url(../images/close.png) no-repeat;
+    background-size: 70%;
+    background-position: center;
+    position: absolute;
+    right: .25rem;
+    top: .25rem;
+    z-index: 202;
+}
+#awardDetailBox .awardDetail .awardDetailWarp {
+    height: 4px;
+    width: 100%;
+    background: url(../images/kqbd.png);
+    position: absolute;
+    bottom: 0;
+}
+.codeImgBox .codeLine {
+    margin-bottom: 4px;
+    padding-top: 8px;
+    color: #333;
+}

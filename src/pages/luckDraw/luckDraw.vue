@@ -8,19 +8,9 @@
             <div class="outercont">
                 <div class="outer-cont defBgColor" style="cursor: pointer; z-index: 4;" :class="rotateClass"> 
                     <img class="outerImg" :src="rotatePan" /> 
-                    <div id="newAwardShow">
-                        <img class="zp" style="width: 84.925px; height: 84.925px; top: 145.038px; left: 145.038px; transform: rotate(30deg) translateY(-101.01px);" :src="zp0" />
-                        <img class="editTarget-deviceLine abs" style="width: 1.875px; height: 144.141px; top: 43.3594px; left: 186.328px; transform: rotate(0deg);" :src="device" />
-                        <img class="zp" style="width: 84.925px; height: 84.925px; top: 145.038px; left: 145.038px; transform: rotate(90deg) translateY(-101.01px);" :src="zp2" />
-                        <img class="editTarget-deviceLine abs" style="width: 1.875px; height: 144.141px; top: 43.3594px; left: 186.328px; transform: rotate(60deg);" :src="device" />
-                        <img class="zp" style="width: 84.925px; height: 84.925px; top: 145.038px; left: 145.038px; transform: rotate(150deg) translateY(-101.01px);" :src="zp0" />
-                        <img class="editTarget-deviceLine abs" style="width: 1.875px; height: 144.141px; top: 43.3594px; left: 186.328px; transform: rotate(120deg);" :src="device" />
-                        <img class="zp" style="width: 84.925px; height: 84.925px; top: 145.038px; left: 145.038px; transform: rotate(210deg) translateY(-101.01px);" :src="zp3" />
-                        <img class="editTarget-deviceLine abs" style="width: 1.875px; height: 144.141px; top: 43.3594px; left: 186.328px; transform: rotate(180deg);" :src="device" />
-                        <img class="zp" style="width: 84.925px; height: 84.925px; top: 145.038px; left: 145.038px; transform: rotate(270deg) translateY(-101.01px);" :src="zp0" />
-                        <img class="editTarget-deviceLine abs" style="width: 1.875px; height: 144.141px; top: 43.3594px; left: 186.328px; transform: rotate(240deg);" :src="device" />
-                        <img class="zp" style="width: 84.925px; height: 84.925px; top: 145.038px; left: 145.038px; transform: rotate(330deg) translateY(-101.01px);" :src="zp1" />
-                        <img class="editTarget-deviceLine abs" style="width: 1.875px; height: 144.141px; top: 43.3594px; left: 186.328px; transform: rotate(300deg);" :src="device" />
+                    <div class="newAwardShow">
+                        <img class="zp" v-for="(item,indexs) in zhuanpanData" :key="indexs" :src="item.img" :style="zhuanStyle(item,indexs)" />
+                        <img class="editTarget-deviceLine abs" v-for="(item,index) in zhuanpanData" :key="index+100" :style="devicStyle(item,index)" :src="device" />
                     </div> 
                 </div>
                 <div id="inner" class="startBtnImg" @click="startAward">
@@ -41,35 +31,22 @@
                     </div>
                 </div>
                 <div id="myAwardBox" class="poupMainBox" style="background-color: rgb(254, 103, 95); border-color: rgb(255, 255, 255);">
-                    <div class="titleImgBox myAwardImg"></div>
-                    <div class="awardBoxBg editTarget-myAwardBox"></div>
-                    <div id="myAwardInfo" class="rowSpacing">
-                        <div class="">
-                            <div>
-                                <div class="awardLimitBox">
-                                    <span class="awardText awardLevel">一等奖</span>
-                                    <span class="colon">：</span>
-                                    <span class="awardText awardNameDef">价值100元礼品</span>
-                                </div>
-                                <span class="awardInfoDetail" @click="gotoDetail">查看详情</span>
+                    <img class="titleImgBox" :src="myAwardImg"/>
+                    <div class="myAwardInfo rowSpacing">
+                        <div class="award-box">
+                            <div class="awardLimitBox">
+                                <span class="awardText awardNameDef">一等奖：价值100元礼品</span>
                             </div>
-                            <div class="infoDeviceLine"></div>
-                            <div>
-                                <div class="awardLimitBox">
-                                    <span class="awardText awardLevel">二等奖</span>
-                                    <span class="colon">：</span>
-                                    <span class="awardText awardNameDef">价值50元礼品</span>
-                                </div>
-                                <span class="awardInfoDetail">查看详情</span>
-                            </div>
+                            <span class="awardInfoDetail" @click="gotoDetail">查看详情</span>
                         </div>
+                        <div class="infoDeviceLine"></div>
                     </div>
-                    <!-- <div id="myAwardInfo" class="rowSpacing">
+                    <!-- <div class="myAwardInfo rowSpacing">
                         <div style="line-height: 2.6rem; padding-left: 0.05rem;font-size: 0.75rem;">暂无中奖记录</div>
                     </div> -->
                 </div>
                 <div id="actExplain" class="poupMainBox " style="background-color: rgb(254, 103, 95); border-color: rgb(255, 255, 255);">
-                    <div class="titleImgBox activeRule"></div>
+                    <img class="titleImgBox" :src="activeRule"/>
                     <div class="ruleBoxBg editTarget-ruleBox"></div>
                     <div id="ruleBox">
                         <div id="activeRuleInfoBox" class="poupMainInfo poupMain">
@@ -118,7 +95,7 @@
         </div>
     </div>
 
-    <resule-box v-if="noAward" @tralg="tralg"></resule-box>
+    <resule-box v-if="noAward" @tralg="tralg" :awardDetail="awardDetail" :type="popType"></resule-box>
 </div>
 </template>
 
@@ -133,6 +110,7 @@ import zp3 from './image/zp3.png'
 import startBtn from './image/startBtn.png'
 import title from './image/title.png'
 import myAwardImg from './image/myAwardImg.png'
+import activeRule from './image/activeRuleImg.png'
 
 export default {
     name: "luckDraw",
@@ -140,13 +118,10 @@ export default {
         return {
             device,
             rotatePan,
-            zp0,
-            zp1,
-            zp2,
-            zp3,
             startBtn,
             title,
-            activeRule: {},
+            myAwardImg,
+            activeRule,
             currentAward: '0', // 0 谢谢参与 ， 1 一等奖，2 二等奖， 3 三等奖， 4 四等奖，5 五等奖， 99 安慰奖
             awardList: [ // 当前奖品
                 {
@@ -170,7 +145,33 @@ export default {
             ],
             noAward: false, // 抽奖弹窗
             loadinData: false, // 加载抽奖
-            endChoujian: true, // 第一次刚进来的时候，不用旋转
+            endChoujian: true, // 第一次刚进来的时候，不用旋转,
+            zhuanpanData: [
+                {
+                    img: zp0
+                },
+                {
+                    img: zp2
+                },
+                {
+                    img: zp0
+                },
+                {
+                    img: zp3
+                },
+                {
+                    img: zp0
+                },
+                {
+                    img: zp1
+                },
+            ],
+            awardDetail: { // 当前中奖的详情
+                name: '一等奖', // 奖品名称
+                levelName: '价值100元礼品', // 奖品等级名称
+                id: '123', // id
+            },
+            popType: '2'
         }
     },
     computed: {
@@ -206,6 +207,36 @@ export default {
         resuleBox
     },
     methods: {
+        zhuanStyle(item,index) {
+            let rota = index * 60 + 30;
+            let heightNum = Math.round( document.documentElement.clientWidth * 0.95 / 2 *100)/100;  // 宽度高度值的一半
+            let widthNum = Math.round( document.documentElement.clientWidth / 2 *100)/100;  // 宽度高度值的一半
+            let currWidth = Math.round( document.documentElement.clientWidth * 0.2 / 2  *100)/100; // 自身高度宽度一半
+            let trasNum =  widthNum / 2; // y 轴移动距离
+            let tops = heightNum - currWidth  + 'px'; // 高度一半 - 自身高度一半
+            let lefts = widthNum - currWidth  + 'px'; // 宽度一半 - 自身宽度一半
+            return {
+                width: '20%',
+                top: tops,
+                left: lefts,
+                transform: `rotate(${rota}deg)`+ `translateY(-${trasNum}px)`
+            }
+        },
+        devicStyle(item,index) {
+            let rota = index * 60 - 1;
+            let heightNum = Math.round( document.documentElement.clientWidth * 0.95 / 2 *100)/100;  // 宽度高度值的一半
+            let widthNum = Math.round( document.documentElement.clientWidth / 2 *100)/100;  // 宽度高度值的一半
+            let a = heightNum - 26 / 152 * heightNum ;
+            let tops = heightNum - a + 'px'; // 高度一半 - 自身高度一半
+            let lefts = widthNum  + 'px'; // 宽度一半 - 自身宽度一半
+            return {
+                width: '2px',
+                height: a + 'px',
+                top: tops,
+                left: lefts,
+                transform: `rotate(${rota}deg)`
+            }
+        },
         gotoDetail() {
             this.$router.push('awardDetail/123');
         },
@@ -221,9 +252,12 @@ export default {
                 }, 5000)
             }, 3000)
         },
-        tralg() {
+        tralg(type) {
             this.noAward = false;
             this.endChoujian = true;
+            if (type == 'detail') {
+                this.$router.push(`awardDetail/${this.awardDetail.id}`);
+            }
         }
     }
 };
@@ -233,18 +267,19 @@ export default {
 <style scoped>
 @import "./css/luck.scss";
 @import "./css/animations.scss";
-.activeRule {
-    background-image: url('./image/activeRuleImg.png');
-    background-position: center center; 
-    background-repeat: no-repeat; 
-    background-size: 100% 85.1064%;
+
+.award-box {
+    display: flex;
+    justify-content: space-around;
 }
-.myAwardImg {
-    background-image: url('./image/myAwardImg.png');
-    background-position: center center; 
-    background-repeat: no-repeat; 
-    background-size: 100% 85.1064%;
+
+.titleImgBox {
+  z-index: 699;
+  position: relative;
+  margin: 0 auto;
+  margin-bottom: 20px;
 }
+
 .txt_style_1 {
     text-align: center;
 }
@@ -328,27 +363,26 @@ export default {
     margin: 0 0 15px;
 }
 
-#myAwardInfo .awardNameDef {
+.myAwardInfo .awardNameDef {
     display: inline-block;
-    width: 6rem;
     vertical-align: bottom;
     text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden;
 }
-#myAwardInfo .awardInfoDetail {
-    font-size: 0.75rem;
+.myAwardInfo .awardInfoDetail {
+    font-size: 18px;
     color: rgb(255, 252, 0);
-    margin-left: .5rem;
+    width: 25%;
 }
 .awardLimitBox {
     display: inline-block;
-    width: 11rem;
     vertical-align: bottom;
     text-overflow: ellipsis;
     overflow: hidden;
-    font-size: 0.75rem; 
+    font-size: 16px; 
     color: rgb(255, 255, 255);
+    width: 75%;
 }
 
 .titleImg {

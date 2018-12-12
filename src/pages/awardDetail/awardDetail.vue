@@ -3,14 +3,13 @@
     <div id="awardDetailScrollBox">
         <div class="awardCloseIcon" @click="closeDetail"></div>
         <div class="awardDetail">
-            <div class="hostName" style="padding: 0.7rem 2.2rem 1rem 0.7rem; text-align: left; color: rgb(255, 255, 255); word-break: break-word; text-decoration: none;"></div>
             <div class="awardName layerId-26 defBgColor" style="cursor: pointer; position: relative;">价值100元礼品</div>
-            <div class="awardCodeTime codeTimeFixedRange"><em>使用期限</em>：<span class="codeBgTime">2018.12.03</span> - <span class="codeEndTime">2018.12.10</span></div>
+            <div class="awardCodeTime codeTimeFixedRange"><em>兑换期限</em>：<span class="codeBgTime">2018.12.03</span> - <span class="codeEndTime">2018.12.10</span></div>
             <div class="awardDetailWarp"></div>
         </div>
         <div class="codeImgBox">
             <div id="codeDetailInfoBox">
-                <div class="codeLine"><span id="codeName">兑奖码</span>：<span style=" max-width: 8.7rem;word-wrap: break-word;display: inline-block; vertical-align: middle;" class="code selectText">888888</span><span class="copy">复制券码</span></div>
+                <div class="codeLine"><span>兑奖码</span>：<span class="code selectText">888888</span></div>
                 <div class="codeOptInfo_Gift">凭券联系现场工作人员兑奖</div>
             </div>
         </div>
@@ -36,7 +35,7 @@
                         <div class="title titleAdress">客服电话</div>
                         <div class="box">
                             <div class="address">
-                                <span class="phoneText">18602186759</span>
+                                <a class="phoneText" href="tel:18602186759" style="text-decoration:none;">18602186759</a>
                             </div>
                         </div>
                     </div>
@@ -57,3 +56,7 @@ export default {
     }
 }
 </script>
+<style scoped>
+@import "./awardDetail.scss";
+
+</style>
